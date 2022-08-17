@@ -55,3 +55,17 @@ function renderInputs(){
     }
 }
 renderInputs();
+
+// color cordinate by past, present future
+function checkTime(){
+    for(let i = 8; i <= 17; i++){
+        if(i < currentTime){
+            $('#' + i).addClass('past');
+        } else if (i == currentTime){
+            $('#' + i).addClass('present');
+        } else {
+            $('#' + i).addClass('future');
+        }
+    }
+}
+checkTime();
